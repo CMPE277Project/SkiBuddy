@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
         //initialize facebook sdk
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
-
-
         FaceBookSetup();
     }
 
@@ -68,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
         loginButton = (LoginButton)findViewById(R.id.login_button);
 
         loginButton.setReadPermissions(Arrays.asList("public_profile"));
-
-       loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
            @Override
            public void onSuccess(LoginResult loginResult) {
+
                GraphRequest graphRequest = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                    @Override
                    public void onCompleted(JSONObject jsonObject, GraphResponse graphResponse) {
@@ -79,17 +77,30 @@ public class MainActivity extends AppCompatActivity {
                             user = new User();
                             user.setFirstName(jsonObject.getString("first_name"));
                             user.setLastName(jsonObject.getString("last_name"));
-                            Log.d("VISUAL: ", user.getFirstName());
+//                            user.setImageFile(jsonObject.getString("picture"));
+                           intent = new Intent(MainActivity.this, secondActivity.class);
+               intent.putExtra("firstName", user.getFirstName());
+               intent.putExtra("lastName", user.getLastName());
+               startActivity(intent);
+                            Log.d("VISUAL: ", user.getLastName());
+
                         }
                         catch(JSONException ex) {
                             ex.printStackTrace();
                         }
                     }
+
                 });
+//               intent = new Intent(MainActivity.this, secondActivity.class);
+//               intent.putExtra("firstName", user.getFirstName());
+//               intent.putExtra("lastName", user.getLastName());
+//               startActivity(intent);
                 Bundle parameters = new Bundle();
                 parameters.putString("fields", "first_name,last_name");
                 graphRequest.setParameters(parameters);
                 graphRequest.executeAsync();
+
+
 
            }
 

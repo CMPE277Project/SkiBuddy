@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class secondActivity extends AppCompatActivity {
 
-    private TextView textView;
+    private TextView textView, textView2;
     private Intent intent;
 
     @Override
@@ -17,7 +17,17 @@ public class secondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        intent = getIntent();
+        String firstName = intent.getStringExtra("firstName");
+        String name = intent.getStringExtra("lastName");
+
+
+//Test to see if receiving data from fb.
         textView = (TextView)findViewById(R.id.displayName);
+        textView2 =(TextView)findViewById(R.id.textName);
+        textView2.setText(firstName);
+        textView.setText(name);
+
 
     }
 

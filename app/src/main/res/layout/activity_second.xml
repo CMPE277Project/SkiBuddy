@@ -8,9 +8,17 @@
 
 
 
+    <com.facebook.login.widget.ProfilePictureView
+        android:id="@+id/profilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       >
+    </com.facebook.login.widget.ProfilePictureView>
+
     <TextView
         android:id="@+id/textName"
         android:layout_width="wrap_content"
+        android:layout_below="@id/profilePic"
         android:layout_height="wrap_content"
         android:text="@string/users_FirstName"
         android:layout_marginTop="20dp"/>
@@ -23,5 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="display name"/>
+
+
 
 </RelativeLayout>
