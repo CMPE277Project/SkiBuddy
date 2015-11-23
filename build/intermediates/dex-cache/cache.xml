@@ -2,18 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/emy/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jar="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-6c1018e4da54720a461311b659df7d2df3384093.jar" />
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/classes-e9671c286b048b2d8cca71fb0862af595f46086a.jar" />
     </item>
     <item
-        jar="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/jars/classes.jar"
+        jar="/Users/emy/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.1/44780c2cf98f6a3cf4e77f1234d644758b329201/bolts-android-1.2.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
-        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/classes-a592a7268aebed3290b0b478425cc77f92ac7d87.jar" />
+        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
+        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.1-5a6f353b74a16bdb5568142f4c6ac507e84da596.jar" />
+    </item>
+    <item
+        jar="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.8.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6f3357b897f59b9d5253e5339fed29031df78f05">
+        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/classes-266bde26a94a9468f519fc0755a7cf0e9fadc990.jar" />
     </item>
 
 </items>
