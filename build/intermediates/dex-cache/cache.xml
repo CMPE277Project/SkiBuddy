@@ -2,25 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/classes-e9671c286b048b2d8cca71fb0862af595f46086a.jar" />
-    </item>
-    <item
-        jar="/Users/emy/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.1/44780c2cf98f6a3cf4e77f1234d644758b329201/bolts-android-1.2.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
-        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.1-5a6f353b74a16bdb5568142f4c6ac507e84da596.jar" />
-    </item>
-    <item
-        jar="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.8.1/jars/classes.jar"
+        jar="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.8.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="6f3357b897f59b9d5253e5339fed29031df78f05">
-        <dex dex="/Users/emy/Documents/cmpe277/TermProject/app/build/intermediates/pre-dexed/debug/classes-266bde26a94a9468f519fc0755a7cf0e9fadc990.jar" />
+        <dex dex="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/pre-dexed/debug/classes-9528e342e66de02371683a5aaae119641361a1db.jar" />
+    </item>
+    <item
+        jar="/Users/davchen/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.1/44780c2cf98f6a3cf4e77f1234d644758b329201/bolts-android-1.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
+        <dex dex="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.1-1abcc57d0533da096396ed197109af34d6fb220e.jar" />
+    </item>
+    <item
+        jar="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/pre-dexed/debug/classes-f3b149a61167fb19e8db29f18690fce2d117875c.jar" />
+    </item>
+    <item
+        jar="/Users/davchen/Downloads/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-34d07f17f6966b301f08d4770d5a4ecf590afebb.jar" />
+    </item>
+    <item
+        jar="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/pre-dexed/debug/classes-7eef43bad9f06914727fb2e1e05d68a4645914ad.jar" />
+    </item>
+    <item
+        jar="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/pre-dexed/debug/classes-ee5855dd7acfc6bbdfa8248f8057407b0cdcbddc.jar" />
+    </item>
+    <item
+        jar="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/davchen/Documents/CMPE277/SkiBuddy/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-0d0e2edc33cdb70a9132a950e1175b2e006da117.jar" />
     </item>
 
 </items>

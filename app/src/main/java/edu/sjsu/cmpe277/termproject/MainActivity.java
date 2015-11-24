@@ -1,9 +1,16 @@
 package edu.sjsu.cmpe277.termproject;
 
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+
+
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -37,7 +44,15 @@ public class MainActivity extends AppCompatActivity {
         //initialize facebook sdk
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+
         FaceBookSetup();
+
+
+
+//        Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+//        startActivity(intent)
+
+
     }
 
     @Override
