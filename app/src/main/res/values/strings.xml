@@ -10,6 +10,8 @@
 
 
     <string name="events">Show Events</string>
+    <string name="detailedEvents">Event Detail</string>
+    <string name="title_activity_events">Events List</string>
 
     <!--<string name="title_activity_second">secondActivity</string>-->
     <!--<string name="users_FirstName">First Name: </string>-->

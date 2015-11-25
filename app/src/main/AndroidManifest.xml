@@ -31,6 +31,10 @@
             android:name=".secondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+        <activity
+            android:name=".EventsListActivity"
+            android:label="@string/title_activity_events" >
+        </activity>
     </application>
 
 </manifest>
