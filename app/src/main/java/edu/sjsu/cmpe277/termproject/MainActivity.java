@@ -1,16 +1,10 @@
 package edu.sjsu.cmpe277.termproject;
 
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
-
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-
-
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -25,6 +19,7 @@ import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.Arrays;
 
 import edu.sjsu.cmpe277.termproject.models.User;
@@ -94,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
                             user.setLastName(jsonObject.getString("last_name"));
 //                            user.setImageFile(jsonObject.getString("picture"));
                            intent = new Intent(MainActivity.this, secondActivity.class);
-               intent.putExtra("firstName", user.getFirstName());
-               intent.putExtra("lastName", user.getLastName());
-               startActivity(intent);
-                            Log.d("VISUAL: ", user.getLastName());
+                           intent.putExtra("firstName", user.getFirstName());
+                           intent.putExtra("lastName", user.getLastName());
+                           startActivity(intent);
+                           Log.d("VISUAL: ", user.getLastName());
 
                         }
                         catch(JSONException ex) {
