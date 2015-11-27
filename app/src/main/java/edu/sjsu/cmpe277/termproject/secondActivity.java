@@ -14,6 +14,7 @@ public class secondActivity extends AppCompatActivity {
     private TextView textView, textView2;
     private Intent intent;
     private Button getEventsButton;
+    private Button initEventButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,16 @@ public class secondActivity extends AppCompatActivity {
                 intent = new Intent(secondActivity.this, EventsListActivity.class);
                 startActivity(intent);
             }
+        });
+
+        initEventButton = (Button)findViewById(R.id.newEventsButton);
+        initEventButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                intent = new Intent(secondActivity.this, NewEventActivity.class);
+                startActivity(intent);
+            }
+
         });
     }
 

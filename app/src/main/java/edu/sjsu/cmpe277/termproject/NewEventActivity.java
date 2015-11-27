@@ -1,16 +1,51 @@
 package edu.sjsu.cmpe277.termproject;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class NewEventActivity extends AppCompatActivity {
+
+    private EditText EditTextName;
+    private EditText EditTextDescription;
+    private EditText EditTextDate;
+
+    private String eventName;
+    private String eventDescription;
+    private String startTime;
+    private String endTime;
+
+    private SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
+
+        EditTextName = (EditText) findViewById(R.id.input_new_event_name);
+        eventName = EditTextName.getText().toString();
+        EditTextDescription = (EditText) findViewById(R.id.input_description);
+        eventDescription = EditTextName.getText().toString();
+
+        //SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+
+        EditTextDate = (EditText) findViewById(R.id.editText_event_date);
+        try {
+            Date myDate = df.parse(EditTextDate.getText().toString());
+            String myText = myDate.getDate() + "-" + (myDate.getMonth() + 1) + "-" + (1900 + myDate.getYear());
+            //Log.i(TAG, myText);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
     @Override
