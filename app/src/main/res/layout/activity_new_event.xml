@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/event_date"
+        android:id="@+id/editText_event_date"
         android:layout_below="@+id/input_description"
         android:layout_alignStart="@+id/input_description" />
 
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="@string/show_new_event_discription"
         android:id="@+id/textView_description"
-        android:layout_above="@+id/event_date"
+        android:layout_above="@+id/editText_event_date"
         android:layout_alignEnd="@+id/event_name_id" />
 
     <TextView
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:text="@string/show_new_event_date"
         android:id="@+id/textView_event_date"
-        android:layout_alignBottom="@+id/event_date"
+        android:layout_alignBottom="@+id/editText_event_date"
         android:layout_alignEnd="@+id/textView_description" />
 
     <TextView
@@ -95,7 +95,7 @@
         android:ems="10"
         android:id="@+id/editText_event_begin_time"
         android:layout_above="@+id/textView_event_end_time"
-        android:layout_alignStart="@+id/event_date" />
+        android:layout_alignStart="@+id/editText_event_date" />
 
     <EditText
         android:layout_width="wrap_content"
