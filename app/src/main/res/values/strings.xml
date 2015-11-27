@@ -9,9 +9,19 @@
     <string name="users_FirstName">First Name: </string>
 
 
-    <string name="events">Show Events</string>
+
+    <string name="events">My Events</string>
+    <string name="new_events">Create an Event</string>
     <string name="detailedEvents">Event Detail</string>
     <string name="title_activity_events">Events List</string>
+    <string name="submit_events">Submit Events</string>
+    <string name="title_activity_new_event">NewEventActivity</string>
+
+    <string name="show_new_event_name">Event Name</string>
+    <string name="show_new_event_discription">Description</string>
+    <string name="show_new_event_date">Event Date</string>
+    <string name="show_new_event_begin">Begin Time</string>
+    <string name="show_new_event_end">End Time</string>
 
     <!--<string name="title_activity_second">secondActivity</string>-->
     <!--<string name="users_FirstName">First Name: </string>-->
