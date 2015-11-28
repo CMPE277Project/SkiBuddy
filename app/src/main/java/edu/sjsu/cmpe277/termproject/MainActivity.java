@@ -1,9 +1,8 @@
 package edu.sjsu.cmpe277.termproject;
 
-
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +18,6 @@ import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.Arrays;
 
 import edu.sjsu.cmpe277.termproject.models.User;
@@ -32,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Intent intent;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,14 +38,7 @@ public class MainActivity extends AppCompatActivity {
         //initialize facebook sdk
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
-
         FaceBookSetup();
-
-
-
-
-
-
     }
 
     @Override
@@ -86,12 +78,14 @@ public class MainActivity extends AppCompatActivity {
                             user = new User();
                             user.setFirstName(jsonObject.getString("first_name"));
                             user.setLastName(jsonObject.getString("last_name"));
+                            user.setUserId(jsonObject.getString("id"));
 //                            user.setImageFile(jsonObject.getString("picture"));
                            intent = new Intent(MainActivity.this, secondActivity.class);
-                           intent.putExtra("firstName", user.getFirstName());
-                           intent.putExtra("lastName", user.getLastName());
-                           startActivity(intent);
-                           Log.d("VISUAL: ", user.getLastName());
+               intent.putExtra("firstName", user.getFirstName());
+               intent.putExtra("lastName", user.getLastName());
+               intent.putExtra("Id", user.getUserId());
+               startActivity(intent);
+                            Log.d("VISUAL: ", user.getLastName());
 
                         }
                         catch(JSONException ex) {
@@ -108,9 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 parameters.putString("fields", "first_name,last_name");
                 graphRequest.setParameters(parameters);
                 graphRequest.executeAsync();
-
-
-
            }
 
            @Override
