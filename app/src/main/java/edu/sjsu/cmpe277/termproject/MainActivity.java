@@ -7,6 +7,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.view.View;
+import android.widget.Button;
+
+
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -29,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private User user;
     private Intent intent;
 
+ //fortest
+    private Button testButton;
 
 
     @Override
@@ -39,6 +45,19 @@ public class MainActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         FaceBookSetup();
+
+
+	        //fortest
+        testButton = (Button)findViewById(R.id.testbutton);
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, NewEventActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override

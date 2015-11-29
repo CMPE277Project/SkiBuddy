@@ -36,6 +36,10 @@ public class secondActivity extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private CharSequence charSequence, title;
 
+    //for test
+    private Button initEventButton;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +103,15 @@ public class secondActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
+	//for test
+	 initEventButton = (Button)findViewById(R.id.newEventsButton);
+        initEventButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                intent = new Intent(secondActivity.this, NewEventActivity.class);
+                startActivity(intent);
+            }
 
 
 
