@@ -1,18 +1,19 @@
 package edu.sjsu.cmpe277.termproject;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -46,20 +47,20 @@ public class secondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         title = charSequence = getTitle();
 
-       intent = getIntent();
+        intent = getIntent();
         String firstName = intent.getStringExtra("firstName");
         String name = intent.getStringExtra("lastName");
         String userId = intent.getStringExtra("Id");
 
 
 //Test to see if receiving data from fb.
-        profilePictureView = (ProfilePictureView)findViewById(R.id.profilePic);
+        profilePictureView = (ProfilePictureView) findViewById(R.id.profilePic);
         profilePictureView.setProfileId(userId);
-       // textView = (TextView)findViewById(R.id.displayName);
-        textView2 =(TextView)findViewById(R.id.textName);
+        // textView = (TextView)findViewById(R.id.displayName);
+        textView2 = (TextView) findViewById(R.id.textName);
         textView2.setText(firstName + " " + name);
         //textView.setText(name);
-        toolbar = (Toolbar)findViewById(R.id.toolBar);
+        toolbar = (Toolbar) findViewById(R.id.toolBar);
 
         //toolbar.setTitle("Welcome");
 
@@ -68,22 +69,21 @@ public class secondActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        listView = (ListView)findViewById(R.id.left_drawer);
+        listView = (ListView) findViewById(R.id.left_drawer);
         nav_drawerList = getResources().getStringArray(R.array.drawer_items);
-        drawerLayout = (DrawerLayout)findViewById(R.id.drawerLayout);
-
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 
 
         objectDrawers[0] = new ObjectDrawer(R.drawable.ic_open_event, "Create Event");
         objectDrawers[1] = new ObjectDrawer(R.drawable.ic_create_event, "Invitations");
-       // objectDrawers[2] = new ObjectDrawer(R.drawable.ic)
+        // objectDrawers[2] = new ObjectDrawer(R.drawable.ic)
         objectDrawers[2] = new ObjectDrawer(R.drawable.ic_logout, "Logout");
 
         customDrawerAdapter = new CustomDrawerAdapter(this, R.layout.listviews_items, objectDrawers);
 
         listView.setAdapter(customDrawerAdapter);
 
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,R.string.drawer_open, R.string.drawer_close){
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close) {
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
@@ -104,18 +104,21 @@ public class secondActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-	//for test
-	 initEventButton = (Button)findViewById(R.id.newEventsButton);
-        initEventButton.setOnClickListener(new View.OnClickListener(){
+
+        //for test
+        initEventButton = (Button)findViewById(R.id.newEventsButton);
+        initEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 intent = new Intent(secondActivity.this, NewEventActivity.class);
                 startActivity(intent);
             }
 
 
+        });
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
