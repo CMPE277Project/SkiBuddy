@@ -31,6 +31,21 @@
             android:label="@string/title_activity_second"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
+
+	        <activity
+            android:name=".EventsListActivity"
+            android:label="@string/title_activity_events" >
+        </activity>
+        <activity
+            android:name=".NewEventActivity"
+            android:label="@string/title_activity_new_event"
+            android:parentActivityName=".secondActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.sjsu.cmpe277.termproject.secondActivity" />
+        </activity>
+
+
     </application>
 
 </manifest>
