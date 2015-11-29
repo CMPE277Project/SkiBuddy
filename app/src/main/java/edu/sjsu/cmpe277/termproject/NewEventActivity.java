@@ -97,8 +97,8 @@ public class NewEventActivity extends AppCompatActivity {
 
                     String st= eventDate + " " +endTime;
                     Log.v(TAG, st);
-                    test = (TextView)findViewById(R.id.testtextView);
-                    test.setText(st);
+                    //test = (TextView)findViewById(R.id.testtextView);
+                    //test.setText(st);
 
                 } catch (ParseException e) {
                     e.printStackTrace();
