@@ -45,36 +45,6 @@ public class NewEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
 
-
-        //add fragment
-
-        if(savedInstanceState == null){
-            //getSupportFragmentManager().beginTransaction().add(R.id.testFragment, createCustomFragment()).commit();
-            Fragment newFragment = createCustomFragment();
-            FragmentTransaction ft = getFragmentManager().beginTransaction().add(R.id.addfragment, newFragment);
-            ft.commit();
-
-        }
-
-
-
-        EditTextName = (EditText) findViewById(R.id.input_new_event_name);
-        eventName = EditTextName.getText().toString();
-        EditTextDescription = (EditText) findViewById(R.id.input_description);
-        eventDescription = EditTextName.getText().toString();
-
-        //SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
-
-        EditTextDate = (EditText) findViewById(R.id.editText_event_date);
-        EditTextStartTime = (EditText) findViewById(R.id.editText_event_begin_time);
-        EditTextEndTime = (EditText) findViewById(R.id.editText_event_end_time);
-
-
-
-
-
-
-
         //fortest
         submitButton = (Button)findViewById(R.id.button);
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +55,21 @@ public class NewEventActivity extends AppCompatActivity {
 
                 //get date and start end time
                 try {
+                    EditTextName = (EditText) findViewById(R.id.input_new_event_name);
+                    eventName = EditTextName.getText().toString();
+                    EditTextDescription = (EditText) findViewById(R.id.input_description);
+                    eventDescription = EditTextDescription.getText().toString();
+
+                    //SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+
+                    EditTextDate = (EditText) findViewById(R.id.editText_event_date);
+                    EditTextStartTime = (EditText) findViewById(R.id.editText_event_begin_time);
+                    EditTextEndTime = (EditText) findViewById(R.id.editText_event_end_time);
+
+
+                    Log.v(TAG, "Event name here:");
+                    Log.v(TAG, EditTextDescription.getText().toString());
+
                     myDate = df_date.parse(EditTextDate.getText().toString());
                     eventDate = myDate.getDate() + "-" + (myDate.getMonth()+1 ) + "-" + (1900 + myDate.getYear());
 
@@ -112,25 +97,33 @@ public class NewEventActivity extends AppCompatActivity {
                 newEvent.setEndTime(endTime);
 
                 //need to store the event here
-                //add fragment
 
 
+                Fragment newFragment = createCustomFragment(eventName, eventDescription, startTime,endTime);
+                FragmentTransaction ft = getFragmentManager().beginTransaction().add(R.id.addfragment, newFragment);
+                ft.commit();
 
             }
 
         });
 
 
-
-
-
     }
 
-    private Fragment createCustomFragment() {
+    private Fragment createCustomFragment(String event_name, String event_description, String start_time, String end_time ) {
         Bundle bundle = new Bundle();
         bundle.putString("SUCCESS_KEY", "Event created!");
+        bundle.putString("EVENT_NAME", event_name);
+        bundle.putString("EVENT_DESCRIPTION", event_description);
+        bundle.putString("EVENT_START", start_time);
+        bundle.putString("EVENT_END", end_time);
         Fragment f = new EventConfirmFragment();
         f.setArguments(bundle);
+
+        Log.v(TAG, "CreateCustomeFragment");
+        Log.v(TAG, event_name);
+        Log.v(TAG, event_description);
+        Log.v(TAG, start_time);
 
         return f;
 
@@ -160,3 +153,5 @@ public class NewEventActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
+
