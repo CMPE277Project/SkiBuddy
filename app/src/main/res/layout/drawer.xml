@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".secondActivity">
 
-    <!-- Main view -->
+   <!-- Main view -->
     <FrameLayout
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
@@ -15,28 +15,6 @@
         <include
             android:id="@+id/toolBar"
             layout="@layout/toolbar"/>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-        <com.facebook.login.widget.ProfilePictureView
-        android:layout_marginTop="58dp"
-        android:id="@+id/profilePic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="3dp"
-        >
-        </com.facebook.login.widget.ProfilePictureView>
-
-        <TextView
-        android:id="@+id/textName"
-        android:layout_toRightOf="@id/profilePic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/users_FirstName"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
-        android:textSize="@dimen/font_size" />
-    </RelativeLayout>
 
     </FrameLayout>
 
@@ -54,5 +32,3 @@
     </ListView>
 
 </android.support.v4.widget.DrawerLayout>
-
-
