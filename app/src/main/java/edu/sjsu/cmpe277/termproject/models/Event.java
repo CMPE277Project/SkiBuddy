@@ -33,17 +33,31 @@ public class Event {
         return startTime;
     }
 
+/*
     public void setStartTime(Date date) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         this.startTime = simpleDateFormat.format(date);
     }
+    */
 
     public String getEndTime() {
         return endTime;
     }
 
+    /*
     public void setEndTime(Date date) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         this.endTime = simpleDateFormat.format(date);
     }
+    */
+
+
+        public void setStartTime(String date_string) {
+            this.startTime = date_string;
+    }
+
+    public void setEndTime(String date_string) {
+        this.endTime = date_string;
+    }
+
 }
