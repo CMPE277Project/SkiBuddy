@@ -109,13 +109,20 @@
         android:layout_alignBottom="@+id/textView_event_end_time"
         android:layout_alignStart="@+id/editText_event_begin_time" />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> yz
     <LinearLayout
         android:orientation="horizontal"
         android:id="@+id/addfragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/button"
+<<<<<<< HEAD
         android:layout_centerHorizontal="true"
+=======
+>>>>>>> yz
         android:layout_below="@+id/textView_event_end_time"></LinearLayout>
 
 

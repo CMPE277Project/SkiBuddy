@@ -1,3 +1,7 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,9 +10,50 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/testFragment"
-        android:layout_width="195dp" android:layout_height="wrap_content"
+        android:id="@+id/confirmMessage"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
-        android:layout_gravity="left|bottom" />
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <TextView
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/endtime"
+        android:layout_above="@+id/confirmMessage"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <TextView
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/starttime"
+        android:layout_above="@+id/endtime"
+        android:layout_marginBottom="80dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <TextView
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/eventdescription"
+        android:layout_above="@+id/starttime"
+        android:layout_marginBottom="110dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <TextView
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/eventname"
+        android:layout_above="@+id/eventdescription"
+        android:layout_marginBottom="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom" />
+
 
 </FrameLayout>
+</RelativeLayout>
