@@ -99,6 +99,11 @@ public class NewEventActivity extends AppCompatActivity {
                 //need to store the event here
 
 
+
+
+
+
+                //add fragment
                 Fragment newFragment = createCustomFragment(eventName, eventDescription, startTime,endTime);
                 FragmentTransaction ft = getFragmentManager().beginTransaction().add(R.id.addfragment, newFragment);
                 ft.commit();
