@@ -37,11 +37,9 @@
         android:layout_marginTop="60dp"
         android:textSize="@dimen/font_size" />
 
-<<<<<<< HEAD
-    <Button
-=======
+
         <Button
->>>>>>> yz
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/new_events"
@@ -52,16 +50,9 @@
         android:layout_centerHorizontal="true" />
 
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> yz
 </RelativeLayout>
-
     </FrameLayout>
-
-    <!-- List View -->
     <ListView
         android:id="@+id/left_drawer"
         android:layout_width="240dp"
