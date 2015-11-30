@@ -1,19 +1,12 @@
 package edu.sjsu.cmpe277.termproject;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
-
 /**
  * Created by yingzhu on 11/29/15.
  */
 public class HttpURLConnectionExample {
     private final String USER_AGENT = "Mozilla/5.0";
 
+    /*
     public static void main(String[] args) throws Exception {
 
         HttpURLConnectionExample http = new HttpURLConnectionExample();
@@ -101,5 +94,5 @@ public class HttpURLConnectionExample {
     }
 
 
-
+*/
 }
