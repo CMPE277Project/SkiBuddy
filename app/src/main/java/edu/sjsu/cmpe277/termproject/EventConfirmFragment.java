@@ -12,7 +12,7 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventConfirmFragment extends Fragment implements clickListenerOnNewEvent{
+public class EventConfirmFragment extends Fragment {
 
 
 
@@ -70,11 +70,7 @@ public class EventConfirmFragment extends Fragment implements clickListenerOnNew
         return rootView;
     }
 
-    @Override
-    public void click()
-    {
 
-    }
 
 
 }
