@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
+        android:hint="mm-dd-yyyy"
         android:id="@+id/editText_event_date"
         android:layout_below="@+id/input_description"
         android:layout_alignStart="@+id/input_description" />
@@ -93,6 +94,7 @@
         android:layout_height="wrap_content"
         android:inputType="time"
         android:ems="10"
+        android:hint="hh:ss"
         android:id="@+id/editText_event_begin_time"
         android:layout_above="@+id/textView_event_end_time"
         android:layout_alignStart="@+id/editText_event_date" />
@@ -102,17 +104,25 @@
         android:layout_height="wrap_content"
         android:inputType="time"
         android:ems="10"
+        android:hint="hh:ss"
         android:id="@+id/editText_event_end_time"
         android:layout_alignBottom="@+id/textView_event_end_time"
         android:layout_alignStart="@+id/editText_event_begin_time" />
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> yz
     <LinearLayout
         android:orientation="horizontal"
         android:id="@+id/addfragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/button"
+<<<<<<< HEAD
+        android:layout_centerHorizontal="true"
+=======
+>>>>>>> yz
         android:layout_below="@+id/textView_event_end_time"></LinearLayout>
 
 
