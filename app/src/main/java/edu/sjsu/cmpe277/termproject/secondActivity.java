@@ -22,6 +22,7 @@ import com.facebook.login.widget.ProfilePictureView;
 import edu.sjsu.cmpe277.termproject.Fragments.CreateFragments;
 import edu.sjsu.cmpe277.termproject.drawer.CustomDrawerAdapter;
 import edu.sjsu.cmpe277.termproject.drawer.ObjectDrawer;
+import edu.sjsu.cmpe277.termproject.models.ListViewActivity;
 
 public class secondActivity extends AppCompatActivity {
 
@@ -39,6 +40,7 @@ public class secondActivity extends AppCompatActivity {
 
     //for test
     private Button initEventButton;
+    private Button showEventsButton;
 
 
     @Override
@@ -104,6 +106,14 @@ public class secondActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
+        showEventsButton = (Button)findViewById(R.id.showEventsButton);
+        showEventsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(secondActivity.this, ListViewActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //for test
         initEventButton = (Button)findViewById(R.id.newEventsButton);

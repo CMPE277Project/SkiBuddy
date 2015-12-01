@@ -25,5 +25,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="134dp" />
 
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/eventTest"
+    android:id="@+id/eventTestButton"
+    android:layout_above="@+id/login_button"
+    android:layout_centerHorizontal="true"
+     />
+
 
 </RelativeLayout>

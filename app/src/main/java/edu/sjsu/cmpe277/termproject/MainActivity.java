@@ -1,15 +1,13 @@
 package edu.sjsu.cmpe277.termproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import android.view.View;
 import android.widget.Button;
-
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -22,8 +20,10 @@ import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.Arrays;
 
+import edu.sjsu.cmpe277.termproject.models.ListViewActivity;
 import edu.sjsu.cmpe277.termproject.models.User;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
  //fortest
     private Button testButton;
-
+    private Button eventListButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //To Bypass the ActionBar issues
+        eventListButton = (Button)findViewById(R.id.eventTestButton);
+        eventListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(intent);
 
+            }
+        });
     }
 
     @Override
