@@ -1,17 +1,14 @@
 package edu.sjsu.cmpe277.termproject.models;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /**
  * Created by emy on 11/22/15.
  */
 public class Event {
 
-    private String title;
-    private String description;
-    private String startTime;
-    private String endTime;
+    private String title = "Test Title";
+    private String description = "Test Description";
+    private String startTime = "";
+    private String endTime = "";
 
     public String getTitle() {
         return title;
@@ -40,6 +37,20 @@ public class Event {
     }
     */
 
+    //Constructor
+    public Event(){
+        this.title = title;
+        this.description = description;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+//    Event(String title, String description, String startTime, String endTime){
+//        this.title = title;
+//        this.description = description;
+//        this.startTime = startTime;
+//        this.endTime = endTime;
+//    }
+
     public String getEndTime() {
         return endTime;
     }
@@ -52,7 +63,7 @@ public class Event {
     */
 
 
-        public void setStartTime(String date_string) {
+    public void setStartTime(String date_string) {
             this.startTime = date_string;
     }
 

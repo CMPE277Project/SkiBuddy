@@ -40,11 +40,19 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/showEvents"
+        android:id="@+id/showEventsButton"
+        android:onClick="showEvent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/new_events"
         android:onClick="events"
         android:id="@+id/newEventsButton"
-        android:layout_marginBottom="39dp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/showEventsButton"
         android:layout_centerHorizontal="true" />
 
 
