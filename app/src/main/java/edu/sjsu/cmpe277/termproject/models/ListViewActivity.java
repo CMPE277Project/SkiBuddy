@@ -11,16 +11,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import edu.sjsu.cmpe277.termproject.R;
+import edu.sjsu.cmpe277.termproject.apiserver.ApiServerGetTask;
 
 public class ListViewActivity extends AppCompatActivity {
-
+    private static final String baseURL = "http://79.170.44.117/rajat-bansal.com/skiBuddy/";
     private ListView listView_;
     private Intent selectedEvent;
 
@@ -55,18 +56,30 @@ public class ListViewActivity extends AppCompatActivity {
     }
 
     private void populateEvents() {
-        String JSONString = "{\"status\":\"success\",\"data\":{\"events\":[\"Beginners Cup\",\"Intermediates Cup\",\"Advanced Cup\"]}}";
+
+//        String JSONString = "{\"status\":\"success\",\"data\":{\"events\":[\"Beginners Cup\",\"Intermediates Cup\",\"Advanced Cup\"]}}";
+        ApiServerGetTask apiServerGetTask = new ApiServerGetTask();
+        String endpoint = baseURL + "getEventInfo.php";
+
         try {
-            JSONObject jsonObj = new JSONObject(JSONString);
-            JSONArray jEvents = jsonObj.getJSONObject("data").getJSONArray("events");
+            JSONObject jsonObj = apiServerGetTask.execute(endpoint).get();
+            System.out.println(jsonObj.toString());
+//            JSONArray jEvents = jsonObj.getJSONObject("data").getJSONArray("events");
+            JSONObject jEvents = jsonObj.getJSONObject("title");
             ArrayList<String> events = new ArrayList<String>();
-            for(int i = 0; i < jEvents.length(); i++){
-                events.add(jEvents.getString(i));
-            }
+
+//            for(int i = 0; i < jEvents.length(); i++){
+//                events.add(jEvents.getString(i));
+//            }
+
             this.eventsList_ = events;
             this.lobbyAdapter_ = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, this.eventsList_);
             this.listView_.setAdapter(this.lobbyAdapter_);
         } catch (JSONException e) {
+            System.out.println(e.toString());
+        } catch (InterruptedException e) {
+            System.out.println(e.toString());
+        } catch (ExecutionException e) {
             System.out.println(e.toString());
         }
 
