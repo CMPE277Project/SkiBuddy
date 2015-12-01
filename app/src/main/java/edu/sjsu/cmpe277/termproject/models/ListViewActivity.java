@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,6 +20,7 @@ import java.util.concurrent.ExecutionException;
 
 import edu.sjsu.cmpe277.termproject.R;
 import edu.sjsu.cmpe277.termproject.apiserver.ApiServerGetTask;
+import edu.sjsu.cmpe277.termproject.apiserver.ApiServerGetTaskArray;
 
 public class ListViewActivity extends AppCompatActivity {
     private static final String baseURL = "http://79.170.44.117/rajat-bansal.com/skiBuddy/";
@@ -59,15 +61,25 @@ public class ListViewActivity extends AppCompatActivity {
 
 //        String JSONString = "{\"status\":\"success\",\"data\":{\"events\":[\"Beginners Cup\",\"Intermediates Cup\",\"Advanced Cup\"]}}";
         ApiServerGetTask apiServerGetTask = new ApiServerGetTask();
-        String endpoint = baseURL + "getEventInfo.php";
+        ApiServerGetTaskArray apiServerGetTaskArray = new ApiServerGetTaskArray();
+        String endpoint = baseURL + "getAllEvents.php";
 
         try {
-            JSONObject jsonObj = apiServerGetTask.execute(endpoint).get();
-            System.out.println(jsonObj.toString());
-//            JSONArray jEvents = jsonObj.getJSONObject("data").getJSONArray("events");
-            JSONObject jEvents = jsonObj.getJSONObject("title");
-            ArrayList<String> events = new ArrayList<String>();
 
+//            JSONObject jsonObj = apiServerGetTask.execute(endpoint).get();
+            JSONArray jsonArray = apiServerGetTaskArray.execute(endpoint).get();
+//            System.out.println(jsonObj.toString());
+            System.out.println("JSONArray String is: " + jsonArray.toString());
+//            JSONArray jEvents = jsonObj.getJSONObject("data").getJSONArray("events");
+            JSONObject json = jsonArray.getJSONObject(0);
+            System.out.println("JSON TITLE: "+ json.toString());
+//            JSONObject jEvents = jsonObj.getJSONObject("title");
+            ArrayList<String> events = new ArrayList<String>();
+            for(int i = 0; i < jsonArray.length(); i++){
+                events.add((String) jsonArray.getJSONObject(i).get("title"));
+                System.out.println("event contents are: " + events.get(i));
+            }
+            System.out.println("event contents are: " + events);
 //            for(int i = 0; i < jEvents.length(); i++){
 //                events.add(jEvents.getString(i));
 //            }
@@ -75,11 +87,11 @@ public class ListViewActivity extends AppCompatActivity {
             this.eventsList_ = events;
             this.lobbyAdapter_ = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, this.eventsList_);
             this.listView_.setAdapter(this.lobbyAdapter_);
-        } catch (JSONException e) {
-            System.out.println(e.toString());
-        } catch (InterruptedException e) {
+        }  catch (InterruptedException e) {
             System.out.println(e.toString());
         } catch (ExecutionException e) {
+            System.out.println(e.toString());
+        } catch (JSONException e) {
             System.out.println(e.toString());
         }
 

@@ -1,5 +1,6 @@
 package edu.sjsu.cmpe277.termproject.apiserver;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -79,7 +80,7 @@ public class ApiServer {
         try {
             // Set up URL Connection
             URL url = new URL(endpoint);
-            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
             int responseCode = connection.getResponseCode();
@@ -103,6 +104,41 @@ public class ApiServer {
         } catch (Exception e) {
             System.out.println(e.toString());
         }
+        return jsonResponse;
+    }
+
+    public JSONArray getRequestArray(String endpoint) {
+        JSONArray jsonResponse = new JSONArray();
+
+        try {
+            // Set up URL Connection
+            URL url = new URL(endpoint);
+            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            connection.setRequestMethod("GET");
+
+            int responseCode = connection.getResponseCode();
+
+            // Handle Response
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader in = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream()));
+
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                    System.out.println("ApiServer response is: " + response);
+                }
+                in.close();
+
+                jsonResponse = new JSONArray(response.toString());
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+        System.out.println("ApiServer jsonResponse is: " + jsonResponse);
         return jsonResponse;
 
     }
